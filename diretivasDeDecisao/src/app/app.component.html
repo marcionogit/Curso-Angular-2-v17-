@@ -1,0 +1,24 @@
+
+<!-- ngIf -->
+<!-- <h1 *ngIf="title; else mensagemPadrao" >{{title}}</h1>
+
+<ng-template #mensagemPadrao>
+    <h1>Curso de angular</h1>
+</ng-template> -->
+<!-- --------------------------- -->
+
+<span [ngSwitch]="title">
+  <p *ngSwitchCase="true">
+    Esse é o parágrafo verdadeiro
+  </p>
+
+  <p *ngSwitchCase="false">
+    Esse é o parágrafo falso
+  </p>
+  
+  <p *ngSwitchDefault>
+    Esse é o parágrafo default
+  </p>
+</span>
+
+<router-outlet></router-outlet>
