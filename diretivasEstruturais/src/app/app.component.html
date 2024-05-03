@@ -1,0 +1,38 @@
+<h1>{{title}}</h1>
+
+<!-- ISSO:
+  <table>
+    <th>Nome:</th>
+    <th>Sexo:</th>
+    <th>Idade:</th>
+    <tr>
+      <td>Márcio</td>
+      <td>Masculino</td>
+      <td>26 Anos</td>
+    </tr>
+    <tr>
+      <td>Alexandre</td>
+      <td>Masculino</td>
+      <td>12 Anos</td>
+    </tr>
+    <tr>
+      <td>Roberta</td>
+      <td>Feminino</td>
+      <td>34 Anos</td>
+    </tr>
+  </table> 
+
+  É O MESMO QUE:
+-->
+
+<table>
+  <th>Nome:</th>
+  <th>Sexo:</th>
+  <th>Idade:</th>
+  <tr *ngFor="let pessoa of lista">
+    <td>{{pessoa.nome}}</td>
+    <td>{{pessoa.sexo}}</td>
+    <td>{{pessoa.idade}}</td>
+  </tr>
+</table>
+<router-outlet><router-outlet />
